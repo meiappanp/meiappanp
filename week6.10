@@ -1,0 +1,18 @@
+def distinct_elements(arr):
+    distinct_set = set()
+    distinct_list = []
+    for num in arr:
+        if num not in distinct_set:
+            distinct_set.add(num)
+            distinct_list.append(num)
+    return distinct_list
+
+# Read input
+n = int(input())
+arr = [int(input()) for _ in range(n)]
+
+# Get distinct elements
+distinct = distinct_elements(arr)
+
+# Print distinct elements
+print(*distinct)
