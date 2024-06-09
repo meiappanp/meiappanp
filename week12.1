@@ -1,0 +1,14 @@
+genre_books = {}
+while True:
+    try:
+        line = input().strip()
+        if not line:
+            break
+        title, genre = map(str.strip, line.split(",", 1))
+        genre_books.setdefault(genre, []).append(title)
+    except ValueError:
+        print("Invalid input format. Please enter a valid book title and genre.")
+    except EOFError:
+        break
+for genre, books in genre_books.items():
+    print(f"{genre}: {', '.join(books)}")
