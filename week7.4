@@ -1,0 +1,15 @@
+def eliminate_common_elements(arr1, arr2):
+    unique_elements = set(arr1) ^ set(arr2)
+    return sorted(unique_elements), len(unique_elements)
+
+def main():
+    size1, size2 = map(int, input().split())
+    arr1 = list(map(int, input().split()))
+    arr2 = list(map(int, input().split()))
+
+    non_repeating_elements, count = eliminate_common_elements(arr1, arr2)
+    if count > 0:
+        print(*non_repeating_elements)
+        print(count)
+    else:
+        print("NO SUCH ELEMENTS")
