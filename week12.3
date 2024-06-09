@@ -1,0 +1,10 @@
+n=int(input())
+l=input().split()
+tc=int(input())
+c=0
+list=[int(l) for l in l]
+for i in range(len(list)):
+    for j in range(len(list)):
+        if abs(list[i]-list[j])==tc and i<j:
+            c+=1
+print(c)
