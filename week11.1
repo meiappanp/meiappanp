@@ -1,0 +1,17 @@
+def safe_division(dividend, divisor):
+    try:
+        result = dividend / divisor
+        return result
+    except ZeroDivisionError:
+        return "Error: Cannot divide or modulo by zero."
+    except Exception as e:
+        return f"Error: {e}"
+
+
+def main():
+    try:
+        dividend = float(input())
+        divisor = float(input())
+        print(safe_division(dividend, divisor))
+    except ValueError:
+        print("Error: Non-numeric input provided.")
