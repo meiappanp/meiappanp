@@ -1,0 +1,12 @@
+try:
+    a=float(input())
+    if a>=0:
+        b=a**0.5
+        c="%.2f"%b
+        print("The square root of",a,"is",c)
+    else:
+        print("Error: Cannot calculate the square root of a negative number.")
+except EOFError:
+    print("Error: could not convert string to float")
+except ValueError:
+    print("Error: could not convert string to float")
