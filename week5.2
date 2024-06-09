@@ -1,0 +1,8 @@
+def reverse_order(S):
+    parts = S.split('@') 
+    username, remaining = parts[0], parts[1]
+    domain, extension = remaining.split('.') 
+    
+    print(extension) 
+    print(domain)     
+    print(username)  
