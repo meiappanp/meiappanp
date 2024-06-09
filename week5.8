@@ -1,0 +1,14 @@
+str1 = input()
+alphabets = digits = special = 0
+
+for i in range(len(str1)):
+    if(ord(str1[i]) >= 48 and ord(str1[i]) <= 57): 
+       digits = digits + 1 
+    elif((ord(str1[i]) >= 65 and ord(str1[i]) <= 90) or (ord(str1[i]) >= 97 and ord(str1[i]) <= 122)):
+        alphabets = alphabets + 1
+    else:
+        special = special + 1
+        
+print (alphabets)
+print( digits)
+print( special)
