@@ -1,0 +1,27 @@
+def check_increasing_or_decreasing(lst):
+    increasing = True
+    decreasing = True
+    for i in range(1, len(lst)):
+        if lst[i] > lst[i - 1]:
+            decreasing = False
+        elif lst[i] < lst[i - 1]:
+            increasing = False
+    return increasing or decreasing
+
+def check_strictly_increasing_with_removal(lst):
+    for i in range(len(lst)):
+        temp_lst = lst[:i] + lst[i+1:]
+        if check_increasing_or_decreasing(temp_lst):
+            return True
+    return False
+
+
+n = int(input())
+lst = []
+for _ in range(n):
+    lst.append(int(input()))
+
+if check_increasing_or_decreasing(lst) or check_strictly_increasing_with_removal(lst):
+    print("True")
+else:
+    print("False")
