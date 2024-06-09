@@ -1,0 +1,19 @@
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        # Last i elements are already sorted
+        for j in range(0, n-i-1):
+            # Swap if the element found is greater
+            # than the next element
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+
+# Input
+n = int(input())
+arr = list(map(int, input().split()))
+
+# Sort the array using bubble sort
+bubble_sort(arr)
+
+# Output the sorted array
+print(*arr)
