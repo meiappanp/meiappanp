@@ -1,0 +1,18 @@
+a=float(input())
+b=0
+if(a>=84 and a<200):
+    b=a*1.20
+    print("%.2f"%b)
+elif(a>=200 and a<400):
+    b=a*1.50
+elif(a>=400 and a<600):
+    b=a*1.80
+elif(a<84):
+    print("100.00")
+else:
+    b=a*2.00
+
+if(b>400):
+    c=b*0.15
+    d=c+b
+    print("%.2f"%(d))
