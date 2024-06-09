@@ -1,0 +1,13 @@
+n=int(input())
+a=len(str(n))
+sum=0
+x=n
+while(x!=0):
+    r=x%10
+    sum=int(sum+math.pow(r,a))
+    a-=1
+    x=x//10
+if(sum==n):
+    print("Yes")
+else:
+    print("No")
