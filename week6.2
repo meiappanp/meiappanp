@@ -1,0 +1,19 @@
+n = int(input())
+arr = []
+for i in range(n):
+    arr.append(int(input()))
+
+m= int(input())
+
+locations = []
+c= 0
+for i in range(len(arr)):
+    if arr[i] ==m:
+        c += 1
+        locations.append(i + 1)
+        print(f"{m} is present at location {i + 1}.")
+
+if c>0:
+    print(f"{m} is present {c} times in the array.")
+else:
+    print(f"{m} is not present in the array.")
