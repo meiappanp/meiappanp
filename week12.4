@@ -1,0 +1,13 @@
+n=int(input())
+d=input().split()
+d=[int(d) for d in d]
+k=int(input())
+sum=0
+while k!=0:
+    x=input().split()
+    x=[int(x) for x in x]
+    if x[0] in d:
+        sum+=x[1]
+        d.remove(x[0])
+    k-=1
+print(sum)
