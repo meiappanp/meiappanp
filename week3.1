@@ -1,0 +1,24 @@
+a=int(input())
+b=int(input())
+c=int(input())
+d=a*a
+e=b*b
+f=c*c
+if(a<c and b<c):
+    g=d+e
+    if(g==f):
+        print("yes")
+    else:
+        print("no")
+elif(b<a and c<a):
+    g=e+f
+    if(g==d):
+        print("yes")
+    else:
+        print("no")
+else:
+        g=d+f
+        if(g==e):
+            print("yes")
+        else:
+            print("no")
